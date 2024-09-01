@@ -1,0 +1,1128 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Nuaimi</title>
+<meta name="author" content="SAM NUAIMI">
+<meta name="generator" content="NUAIMI Web & Graphc Designer https://nuaimi.us">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="N Logo.ico" rel="shortcut icon" type="image/x-icon">
+<link href="N Logo.png" rel="icon" sizes="32x32" type="image/png">
+<link href="N Logo(1).png" rel="icon" sizes="64x64" type="image/png">
+<link href="N Logo(2).png" rel="apple-touch-icon" sizes="152x152">
+<link href="N Logo(3).png" rel="apple-touch-icon" sizes="167x167">
+<link href="N Logo(4).png" rel="apple-touch-icon" sizes="180x180">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/aboutme.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<script src="jquery-3.7.1.min.js"></script>
+<script src="jquery.ui.effect.min.js"></script>
+<script src="skrollr.min.js"></script>
+<script src="wwb19.min.js"></script>
+<script>   
+   document.addEventListener('DOMContentLoaded', function(event)
+   {
+      var skillsProgressbar1 = document.querySelector('#skillsProgressbar1 .progress-bar');
+      var skillsProgressbar1_observer = new window.ResizeObserver(entries => 
+      {
+         var val = Math.round(((entries[0].target.clientWidth/entries[0].target.offsetParent.clientWidth)*100));
+         entries[0].target.innerText = val + '%';
+         entries[0].target.setAttribute('aria-valuenow', val);
+      });
+      skillsProgressbar1_observer.observe(skillsProgressbar1);
+      var skillsProgressbar2 = document.querySelector('#skillsProgressbar2 .progress-bar');
+      var skillsProgressbar2_observer = new window.ResizeObserver(entries => 
+      {
+         var val = Math.round(((entries[0].target.clientWidth/entries[0].target.offsetParent.clientWidth)*100));
+         entries[0].target.innerText = val + '%';
+         entries[0].target.setAttribute('aria-valuenow', val);
+      });
+      skillsProgressbar2_observer.observe(skillsProgressbar2);
+      var skillsProgressbar3 = document.querySelector('#skillsProgressbar3 .progress-bar');
+      var skillsProgressbar3_observer = new window.ResizeObserver(entries => 
+      {
+         var val = Math.round(((entries[0].target.clientWidth/entries[0].target.offsetParent.clientWidth)*100));
+         entries[0].target.innerText = val + '%';
+         entries[0].target.setAttribute('aria-valuenow', val);
+      });
+      skillsProgressbar3_observer.observe(skillsProgressbar3);
+      var skillsProgressbar4 = document.querySelector('#skillsProgressbar4 .progress-bar');
+      var skillsProgressbar4_observer = new window.ResizeObserver(entries => 
+      {
+         var val = Math.round(((entries[0].target.clientWidth/entries[0].target.offsetParent.clientWidth)*100));
+         entries[0].target.innerText = val + '%';
+         entries[0].target.setAttribute('aria-valuenow', val);
+      });
+      skillsProgressbar4_observer.observe(skillsProgressbar4);
+      var menuItems = document.querySelectorAll('#wb_ResponsiveMenu2 ul li a');
+      menuItems.forEach(function(item)
+      {
+         item.addEventListener('click', function(event) 
+         {
+            var checkbox = document.querySelector('#wb_ResponsiveMenu2 input');
+            checkbox.checked = false;
+         });
+      });
+   });
+</script>
+<script>   
+   $(document).ready(function()
+   {
+      $('#wb_Text3').addClass('visibility-hidden');
+      $('#wb_intro').addClass('visibility-hidden');
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $('#wb_skillsInner').addClass('visibility-hidden');
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      $('#reviewsImage1').addClass('visibility-hidden');
+      $('#portfolio-image2').addClass('visibility-hidden');
+      var prevScrollTop = 0;
+      $(window).scroll(function(event)
+      {
+         var scrollTop = $(this).scrollTop();
+         if (Math.abs(prevScrollTop - scrollTop) <= 5)
+            return;
+         if (scrollTop < prevScrollTop)
+         {
+            $('#PageHeader1').removeClass('scroll-up');
+         }
+         else
+         {
+            $('#PageHeader1').addClass('scroll-up');
+         }
+         prevScrollTop = scrollTop;
+      });
+      function onScrollText3()
+      {
+         var $obj = $("#wb_Text3");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_Text3', 'animate-fade-in', 500, 1250);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_Text3', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_Text3').inViewPort(true))
+      {
+         $('#wb_Text3').addClass("in-viewport");
+      }
+      onScrollText3();
+      $(window).scroll(function(event)
+      {
+         onScrollText3();
+      });
+      $("a[href*='#header']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_header').offset().top }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#intro']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_intro').offset().top-68 }, 600, 'easeOutCirc');
+      });
+      function onScrollintro()
+      {
+         var $obj = $("#wb_intro");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_intro', 'animate-fade-in', 1500, 2000);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_intro', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_intro').inViewPort(true))
+      {
+         $('#wb_intro').addClass("in-viewport");
+      }
+      onScrollintro();
+      $(window).scroll(function(event)
+      {
+         onScrollintro();
+      });
+      function skrollrInit()
+      {
+         skrollr.init({forceHeight: false, mobileCheck: function() { return false; }, smoothScrolling: false});
+      }
+      skrollrInit();
+      $("a[href*='#skills']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_skills').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#services']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_services').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      function onScrollservices()
+      {
+         var $obj = $("#wb_services");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollservices();
+      $(window).scroll(function(event)
+      {
+         onScrollservices();
+      });
+      $("a[href*='#skillsInner']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_skillsInner').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function onScrollskillsInner()
+      {
+         var $obj = $("#wb_skillsInner");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(true))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('wb_skillsInner', 'animate-fade-in', 100, 750);
+         }
+         else
+         if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+         {
+            $obj.removeClass("in-viewport");
+            AnimateCss('wb_skillsInner', 'animate-fade-out', 0, 0);
+         }
+      }
+      if (!$('#wb_skillsInner').inViewPort(true))
+      {
+         $('#wb_skillsInner').addClass("in-viewport");
+      }
+      onScrollskillsInner();
+      $(window).scroll(function(event)
+      {
+         onScrollskillsInner();
+      });
+      $("a[href*='#servicesLayoutGrid1']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_servicesLayoutGrid1').offset().top-68 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#servicesLayoutGrid2']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_servicesLayoutGrid2').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#facts']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_facts').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      $("a[href*='#portfolio']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_portfolio').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      function onScrollportfolio()
+      {
+         var $obj = $("#wb_portfolio");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollportfolio();
+      $(window).scroll(function(event)
+      {
+         onScrollportfolio();
+      });
+      $("a[href*='#portfolioLayoutGrid1']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_portfolioLayoutGrid1').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function onScrollportfolioLayoutGrid1()
+      {
+         var $obj = $("#wb_portfolioLayoutGrid1");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollportfolioLayoutGrid1();
+      $(window).scroll(function(event)
+      {
+         onScrollportfolioLayoutGrid1();
+      });
+      $("a[href*='#portfolioLayoutGrid2']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_portfolioLayoutGrid2').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      function onScrollportfolioLayoutGrid2()
+      {
+         var $obj = $("#wb_portfolioLayoutGrid2");
+         if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+         {
+            $obj.addClass("in-viewport");
+            AnimateCss('reviewsImage1', 'animate-fade-in-up', 0, 1000);
+            AnimateCss('portfolio-image2', 'animate-fade-in-up', 500, 1000);
+         }
+      }
+      onScrollportfolioLayoutGrid2();
+      $(window).scroll(function(event)
+      {
+         onScrollportfolioLayoutGrid2();
+      });
+      function aspectRatioportfolioRollOverText1()
+      {
+         var $obj = $("#portfolioRollOverText1");
+         var height = $obj.width() / 1.38;
+         if (height == 0)
+         {
+            setTimeout(function(){ aspectRatioportfolioRollOverText1() }, 250);
+         }
+         else
+         {
+            $obj.css('height', height + 'px');
+         }
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText1();
+      });
+      aspectRatioportfolioRollOverText1();
+      function aspectRatioportfolioRollOverText2()
+      {
+         var $obj = $("#portfolioRollOverText2");
+         var height = $obj.width() / 1.38;
+         if (height == 0)
+         {
+            setTimeout(function(){ aspectRatioportfolioRollOverText2() }, 250);
+         }
+         else
+         {
+            $obj.css('height', height + 'px');
+         }
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText2();
+      });
+      aspectRatioportfolioRollOverText2();
+      function aspectRatioportfolioRollOverText3()
+      {
+         var $obj = $("#portfolioRollOverText3");
+         var height = $obj.width() / 1.38;
+         if (height == 0)
+         {
+            setTimeout(function(){ aspectRatioportfolioRollOverText3() }, 250);
+         }
+         else
+         {
+            $obj.css('height', height + 'px');
+         }
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText3();
+      });
+      aspectRatioportfolioRollOverText3();
+      function aspectRatioportfolioRollOverText4()
+      {
+         var $obj = $("#portfolioRollOverText4");
+         var height = $obj.width() / 1.38;
+         if (height == 0)
+         {
+            setTimeout(function(){ aspectRatioportfolioRollOverText4() }, 250);
+         }
+         else
+         {
+            $obj.css('height', height + 'px');
+         }
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText4();
+      });
+      aspectRatioportfolioRollOverText4();
+      function aspectRatioportfolioRollOverText5()
+      {
+         var $obj = $("#portfolioRollOverText5");
+         var height = $obj.width() / 1.38;
+         if (height == 0)
+         {
+            setTimeout(function(){ aspectRatioportfolioRollOverText5() }, 250);
+         }
+         else
+         {
+            $obj.css('height', height + 'px');
+         }
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText5();
+      });
+      aspectRatioportfolioRollOverText5();
+      function aspectRatioportfolioRollOverText6()
+      {
+         var $obj = $("#portfolioRollOverText6");
+         var height = $obj.width() / 1.38;
+         if (height == 0)
+         {
+            setTimeout(function(){ aspectRatioportfolioRollOverText6() }, 250);
+         }
+         else
+         {
+            $obj.css('height', height + 'px');
+         }
+      }
+      $(window).resize(function()
+      {
+         aspectRatioportfolioRollOverText6();
+      });
+      aspectRatioportfolioRollOverText6();
+   function countUpfactsJavaScript1()
+   {
+      var $obj = $('#factsJavaScript1');
+      var count = $obj.attr('data-count');
+      var bottomObj = $obj.offset().top + $obj.outerHeight();
+      var bottomWnd = $(window).scrollTop() + $(window).height();
+      if (bottomWnd > bottomObj && count != 0)
+      {
+         $({countUp: $obj.text()}).animate({countUp: count},
+         {
+            duration: 4000,
+            step: function() { $obj.text(Math.floor(this.countUp)); },
+            complete: function() { $obj.text(this.countUp); $obj.attr('data-count', 0); }
+         });  
+      }
+   }
+   $(window).scroll( function()
+   {
+      countUpfactsJavaScript1();
+   });
+   countUpfactsJavaScript1();
+   function countUpfactsJavaScript2()
+   {
+      var $obj = $('#factsJavaScript2');
+      var count = $obj.attr('data-count');
+      var bottomObj = $obj.offset().top + $obj.outerHeight();
+      var bottomWnd = $(window).scrollTop() + $(window).height();
+      if (bottomWnd > bottomObj && count != 0)
+      {
+         $({countUp: $obj.text()}).animate({countUp: count},
+         {
+            duration: 4000,
+            step: function() { $obj.text(Math.floor(this.countUp)); },
+            complete: function() { $obj.text(this.countUp); $obj.attr('data-count', 0); }
+         });  
+      }
+   }
+   $(window).scroll( function()
+   {
+      countUpfactsJavaScript2();
+   });
+   countUpfactsJavaScript2();
+   function countUpfactsJavaScript3()
+   {
+      var $obj = $('#factsJavaScript3');
+      var count = $obj.attr('data-count');
+      var bottomObj = $obj.offset().top + $obj.outerHeight();
+      var bottomWnd = $(window).scrollTop() + $(window).height();
+      if (bottomWnd > bottomObj && count != 0)
+      {
+         $({countUp: $obj.text()}).animate({countUp: count},
+         {
+            duration: 4000,
+            step: function() { $obj.text(Math.floor(this.countUp)); },
+            complete: function() { $obj.text(this.countUp); $obj.attr('data-count', 0); }
+         });  
+      }
+   }
+   $(window).scroll( function()
+   {
+      countUpfactsJavaScript3();
+   });
+   countUpfactsJavaScript3();
+   function countUpfactsJavaScript4()
+   {
+      var $obj = $('#factsJavaScript4');
+      var count = $obj.attr('data-count');
+      var bottomObj = $obj.offset().top + $obj.outerHeight();
+      var bottomWnd = $(window).scrollTop() + $(window).height();
+      if (bottomWnd > bottomObj && count != 0)
+      {
+         $({countUp: $obj.text()}).animate({countUp: count},
+         {
+            duration: 10000,
+            step: function() { $obj.text(Math.floor(this.countUp)); },
+            complete: function() { $obj.text(this.countUp); $obj.attr('data-count', 0); }
+         });  
+      }
+   }
+   $(window).scroll( function()
+   {
+      countUpfactsJavaScript4();
+   });
+   countUpfactsJavaScript4();
+      $("a[href*='#contactForm']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contactForm').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#contact']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_contact').offset().top-68 }, 600, 'easeOutQuad');
+      });
+      var overflow = $(document.body).css('overflow');
+      var $menu = $('#Extension2');
+      var $overlay = $menu.find('.overlay:eq(0)').css('top', '0');
+      $menu.prependTo(document.body);
+      var transitionsEventName = 'transitionend';
+      var transitionsSupported = false;
+      if ('transition' in document.documentElement.style)
+      {
+         transitionsSupported = true;
+      }
+      else
+      if ('WebkitTransition' in document.documentElement.style)
+      {
+      	transitionsSupported = true;
+      	transitionsEventName = 'webkitTransitionEnd';
+      }
+      function showOverlayMenu()
+      {
+         $(document.body).css('overflow' ,'hidden');
+         $menu.addClass('show');
+         $menu.css('z-index', '1000');
+      }
+      function hideOverlayMenu()
+      {
+         $(document.body).css('overflow', overflow);
+         $menu.removeClass('show');
+         $menu.addClass('hide');
+         function onEndTransition(e)
+         {
+         	if (transitionsSupported)
+         	{
+         		$menu.off(transitionsEventName, onEndTransition);
+         	}
+         	$menu.removeClass('hide');
+           $menu.css('z-index', '-1');
+         };
+         if (transitionsSupported)
+         {
+         	$menu.on(transitionsEventName, onEndTransition);
+         }
+         else 
+         {
+         	onEndTransition();
+         }
+      }
+      $('#overlay-open-button').on('click', function(e)
+      {
+            showOverlayMenu();
+            return false;
+      });
+      $('#overlay-close-button').on('click', function(e)
+      {
+            hideOverlayMenu();
+            return false;
+      });
+      $(document).on('keyup', function(e) 
+      {
+         if (e.type == 'keyup' && e.keyCode == 27) 
+         {
+            hideOverlayMenu();
+         }
+      });
+      $("#Extension2 ul li a").click(function(event)
+      {
+          hideOverlayMenu();
+      });
+      $("a[href*='#LayoutGrid2']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid2').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      $("a[href*='#LayoutGrid1']").click(function(event)
+      {
+         event.preventDefault();
+         $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid1').offset().top-88 }, 600, 'easeOutCirc');
+      });
+      var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+      if (iOS)
+      {
+         $('#wb_contact').css('background-attachment', 'scroll');
+      }
+   });
+</script>
+<script>   
+   $(document).ready(function()
+   {
+      var $progressbars = $('.ui-progressbar');
+      
+      $progressbars.each(function() 
+      {
+        var $obj = $(this);
+        $obj.data('value', $obj.progressbar('option', 'value'));
+        $obj.data('done', false);
+        $obj.progressbar('option', 'value', 0);
+      });
+      $(window).bind('scroll', function() 
+      {
+         $progressbars.each(function() 
+         {
+            var $obj = $(this);
+            if (!$obj.data('done') && $(window).scrollTop() + $(window).height() >= $obj.offset().top) 
+            {
+               $obj.data('done', true);
+               $obj.animate({scroll: 1}, 
+               { 
+                  duration: 3000, 
+                  step: function(now) 
+                  {
+                     var $obj = $(this);
+                     var val = Math.round($obj.data('value') * now);
+                     $obj.progressbar('option', 'value', val);
+                  }
+               });
+            }
+         });
+      }).triggerHandler('scroll');
+   });
+</script>
+</head>
+<body>
+   <div id="PageHeader1">
+      <div id="wb_Image4">
+         <img src="images/Nuaimii Logo.png" id="Image4" alt="" width="120" height="41"></div>
+      <div id="wb_ResponsiveMenu2">
+         <label class="toggle" for="ResponsiveMenu2-submenu" id="ResponsiveMenu2-title"><span id="ResponsiveMenu2-icon"><span>&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span></span></label>
+         <input type="checkbox" id="ResponsiveMenu2-submenu">
+         <ul class="ResponsiveMenu2" id="ResponsiveMenu2" role="menu">
+            <li role="menuitem"><a href="#intro" class="nav-link">HOME</a></li>
+            <li role="menuitem"><a href="#skills" class="nav-link">ABOUT</a></li>
+            <li role="menuitem"><a href="#services" class="nav-link">SERVICES</a></li>
+            <li role="menuitem"><a href="#facts" class="nav-link">FACTS</a></li>
+            <li role="menuitem"><a href="#portfolio" class="nav-link">PORTFOLIO</a></li>
+            <li role="menuitem"><a href="#contact" class="nav-link">CONTACT</a></li>
+         </ul>
+      </div>
+   </div>
+   <div id="wb_header">
+      <div id="header">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_Image1">
+                     <img src="images/Nuaimii Logo.png" id="Image1" alt="" width="95" height="33">
+                  </div>
+                  <div id="wb_Image3">
+                     <img src="images/Nuaimii Logo.png" loading="lazy" id="Image3" alt="" width="124" height="43">
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_aboutMeMenu">
+                     <ul id="aboutMeMenu" role="menubar" class="nav">
+                        <li role="menuitem" class="nav-item firstmain"><a class="nav-link" href="#intro" target="_self">HOME</a>
+                        </li>
+                        <li role="menuitem" class="nav-item"><a class="nav-link" href="#skills" target="_self">ABOUT</a>
+                        </li>
+                        <li role="menuitem" class="nav-item"><a class="nav-link" href="#services" target="_self">SERVICES</a>
+                        </li>
+                        <li role="menuitem" class="nav-item"><a class="nav-link" href="#facts" target="_self">FACTS</a>
+                        </li>
+                        <li role="menuitem" class="nav-item"><a class="nav-link" href="#portfolio" target="_self">PORTFOLIO</a>
+                        </li>
+                        <li role="menuitem" class="nav-item"><a class="nav-link" href="#contact" target="_self">CONTACT</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div id="wb_Extension2">
+                     <a id="overlay-open-button" href="#"><span></span></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_intro" data--500-end="opacity:0;" data-100-start="opacity:100;">
+      <div id="intro">
+         <div class="col-1">
+            <div class="col-1-padding">
+               <div id="wb_homeText" data-bottom="opacity:1;" data--300-bottom="opacity:0.0;">
+                  <p style="font-size:20px;"><span style="font-style:italic;">My Name is </span></p>
+                  <p style="font-family:Poppins;font-weight:700;font-size:20px;line-height:36px;"><span style="font-family:Sacramento;font-size:35px;font-weight:bold;">Sam Nuaimi</span></p>
+                  <p style="font-size:20px;font-style:italic;">I'm a Web Designer</p>
+               </div>
+               <div id="wb_Text1" data-bottom="opacity:1;" data--300-bottom="opacity:0.0;">
+                  <p style="margin:0 0 0 60px;font-size:11px;"><span style="font-style:italic;">My Name is </span></p>
+                  <p style="margin:0 0 0 60px;font-family:Poppins;font-weight:700;font-size:21px;line-height:26.4px;"><span style="font-family:Sacramento;font-weight:bold;">Sam Nuaimi</span></p>
+                  <p style="margin:0 0 0 60px;font-size:11px;font-style:italic;line-height:15.4px;">I'm a Web Designer</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_skills">
+      <div id="skills">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_skillsInner">
+                     <div id="skillsInner">
+                        <div class="row">
+                           <div class="col-1">
+                              <div class="col-1-padding">
+                                 <div id="wb_skillsHeading">
+                                    <p style="margin:6.67px 0 6.67px 0;font-size:16px;line-height:18px;font-weight:bold;font-style:italic;"><span style="font-size:24px;line-height:27.5px;">Skills</span></p>
+                                 </div>
+                                 <label for="" id="skillsLabel1">HTML</label>
+                                 <div id="skillsProgressbar1">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" title="90%" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                 </div>
+                                 <label for="" id="skillsLabel2">CSS</label>
+                                 <div id="skillsProgressbar2">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" title="80%" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                 </div>
+                                 <label for="" id="skillsLabel3">JavaScript</label>
+                                 <div id="skillsProgressbar3">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" title="60%" aria-valuemin="0" aria-valuemax="100">60%</div>
+                                 </div>
+                                 <label for="" id="skillsLabel4">PHP:</label>
+                                 <div id="skillsProgressbar4">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="75" title="75%" aria-valuemin="0" aria-valuemax="100">75%</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-2">
+                              <div class="col-2-padding">
+                                 <div id="wb_skillsText">
+                                    <p style="margin:6.67px 0 6.67px 0;font-size:16px;font-style:italic;"><span style="font-size:24px;line-height:27.5px;font-weight:bold;">About Me</span></p>
+                                    <p style="font-size:15px;font-style:italic;line-height:21.6px;">Welcome to NUAIMI W&amp;G, where innovation seamlessly integrates with technology. We are not merely a web design firm; we are your digital experts, creating exceptional websites that outshine the competition. </p>
+                                    <p style="font-size:15px;font-style:italic;line-height:21.6px;">&nbsp;</p>
+                                    <p style="font-size:15px;font-style:italic;line-height:21.6px;">Our remarkable offers on domains, hosting, and email services are as rare as discovering a unicorn. After all, who wouldn’t desire a distinctive domain name that captures attention? </p>
+                                    <p style="font-size:15px;font-style:italic;line-height:21.6px;">&nbsp;</p>
+                                    <p style="font-size:15px;font-style:italic;line-height:21.6px;">Our team excels in overcoming challenges, managing server configurations, resolving network issues, and mastering software with ease. No technical obstacle is too daunting for our skilled professionals.</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_services">
+      <div id="services">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_servicesHeading">
+                     <h1 id="servicesHeading">SERVICES</h1>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_servicesLayoutGrid1">
+      <div id="servicesLayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_servicesCard1" class="card" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard1-card-body">
+                        <div id="servicesCard1-card-item0"><a href="http://"><i class="fa fa-globe"></i></a></div>
+                        <div id="servicesCard1-card-item1">WEB DESIGN</div>
+                        <div id="servicesCard1-card-item2">At NUAIMI W&G, our focus extends beyond website construction, we create digital masterpieces. We take pleasure in transforming the impossible into reality.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_servicesCard2" class="card" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard2-card-body">
+                        <div id="servicesCard2-card-item0"><a href="http://"><i class="fa fa-code"></i></a></div>
+                        <div id="servicesCard2-card-item1">WEB DEVELOPMENT</div>
+                        <div id="servicesCard2-card-item2">At NUAIMI W&G, we craft your website using a variety of programming languages, including HTML, CSS, JavaScript, and PHP.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="wb_servicesCard3" class="card" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard3-card-body">
+                        <div id="servicesCard3-card-item0"><a href="http://"><i class="fa fa-paint-brush"></i></a></div>
+                        <div id="servicesCard3-card-item1">GRAPHIC DESIGN</div>
+                        <div id="servicesCard3-card-item2">At NUAIMI W&G, we specialize in creating business logos, forms, stamps, and product images tailored to your needs.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_servicesLayoutGrid2">
+      <div id="servicesLayoutGrid2">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_servicesCard4" class="card" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard4-card-body">
+                        <div id="servicesCard4-card-item0"><a href="http://"><i class="fa fa-mobile"></i></a></div>
+                        <div id="servicesCard4-card-item1">RESPONSIVE DESIGN</div>
+                        <div id="servicesCard4-card-item2">At NUAIMI W&G, we ensure that your website is optimized for seamless compatibility across various device sizes, including smartphones, tablets, laptops, and large desktop screens.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_servicesCard5" class="card" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard5-card-body">
+                        <div id="servicesCard5-card-item0"><a href="http://"><i class="fa fa-camera"></i></a></div>
+                        <div id="servicesCard5-card-item1">PHOTOGRAPHY</div>
+                        <div id="servicesCard5-card-item2">At NUAIMI W&G, our photographers will be dispatched to guarantee that your business images are presented professionally across your website.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="wb_servicesCard6" class="card" data-100-bottom="opacity:0.0;" data--500-bottom="opacity:1.0;">
+                     <div id="servicesCard6-card-body">
+                        <div id="servicesCard6-card-item0"><a href="http://"><i class="fa fa-comments-o"></i></a></div>
+                        <div id="servicesCard6-card-item1">MARKETING</div>
+                        <div id="servicesCard6-card-item2">Our extensive offerings, which include domain registration, hosting, and email services, are crafted to deliver exceptional value and maximize your return on investment.</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_facts">
+      <div id="facts">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_factsIcon1">
+                     <a href="./index.html"><div id="factsIcon1"><i class="fa fa-users"></i></div></a>
+                  </div>
+                  <div id="wb_factsJavaScript1">
+                     <div data-count="103" id="factsJavaScript1"></div>
+                  </div>
+                  <div id="wb_factsHeading1">
+                     <h2 id="factsHeading1">Happy Customers</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="wb_factsIcon2">
+                     <a href="./index.html"><div id="factsIcon2"><i class="fa fa-briefcase"></i></div></a>
+                  </div>
+                  <div id="wb_factsJavaScript2">
+                     <div data-count="145" id="factsJavaScript2"></div>
+                  </div>
+                  <div id="wb_factsHeading2">
+                     <h2 id="factsHeading2">Projects</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="wb_factsIcon3">
+                     <a href="./index.html"><div id="factsIcon3"><i class="fa fa-diamond"></i></div></a>
+                  </div>
+                  <div id="wb_factsJavaScript3">
+                     <div data-count="28" id="factsJavaScript3"></div>
+                  </div>
+                  <div id="wb_factsHeading3">
+                     <h2 id="factsHeading3">Awards</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="col-4">
+               <div class="col-4-padding">
+                  <div id="wb_factsIcon4">
+                     <a href="./index.html"><div id="factsIcon4"><i class="fa fa-clock-o"></i></div></a>
+                  </div>
+                  <div id="wb_factsJavaScript4">
+                     <div data-count="5456" id="factsJavaScript4"></div>
+                  </div>
+                  <div id="wb_factsHeading4">
+                     <h2 id="factsHeading4">Hours of Work</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_portfolio">
+      <div id="portfolio">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_portfolioHeading">
+                     <h1 id="portfolioHeading">PORTFOLIO</h1>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_portfolioLayoutGrid1">
+      <div id="portfolioLayoutGrid1">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="portfolioRollOverText1">
+                     <img alt="Real Estate" class="image" src="images/template01.jpg" width="330" height="239">
+                     <div class="caption">
+                        <div class="title">Real Estate</div>
+                        <p class="description">For Website<br>Business</p>
+                        <a class="link" href="mailto:sam@nuaimi.us">Email Me</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="portfolioRollOverText2">
+                     <img alt="Retail Stores" class="image" src="images/template02.jpg" width="330" height="239">
+                     <div class="caption">
+                        <div class="title">Retail Stores</div>
+                        <p class="description">For Website<br>Business</p>
+                        <a class="link" href="mailto:sam@nuaimi.us">Email Me</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="portfolioRollOverText3">
+                     <img alt="Profiles" class="image" src="images/template03.jpg" width="330" height="239">
+                     <div class="caption">
+                        <div class="title">Profiles</div>
+                        <p class="description">For Website<br>Personal Profile</p>
+                        <a class="link" href="mailto:sam@nuaimi.us">Email Me</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_portfolioLayoutGrid2">
+      <div id="portfolioLayoutGrid2">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="portfolioRollOverText4">
+                     <img alt="Shopping" class="image" src="images/template04.jpg" width="330" height="239">
+                     <div class="caption">
+                        <div class="title">Shopping</div>
+                        <p class="description">For Website<br>Business</p>
+                        <a class="link" href="mailto:sam@nuaimi.us">Email Me</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-2">
+               <div class="col-2-padding">
+                  <div id="portfolioRollOverText5">
+                     <img alt="Admin &amp; Users" class="image" src="images/template05.jpg" width="330" height="239">
+                     <div class="caption">
+                        <div class="title">Admin & Users</div>
+                        <p class="description">For Website<br>Business</p>
+                        <a class="link" href="mailto:sam@nuaimi.us">Email Me</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-3">
+               <div class="col-3-padding">
+                  <div id="portfolioRollOverText6">
+                     <img alt="Accounting" class="image" src="images/template06.jpg" width="330" height="239">
+                     <div class="caption">
+                        <div class="title">Accounting</div>
+                        <p class="description">For Website<br>Business</p>
+                        <a class="link" href="mailto:sam@nuaimi.us">Email Me</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_contact">
+      <div id="contact-overlay"></div>
+      <div id="contact">
+         <div class="row">
+            <div class="col-1">
+               <div class="col-1-padding">
+                  <div id="wb_LayoutGrid1">
+                     <div id="LayoutGrid1">
+                        <div class="row">
+                           <div class="col-1">
+                              <div class="col-1-padding">
+                                 <div id="wb_Text3">
+                                    <span style="color:#4E4E4E;font-family:'Open Sans';font-weight:700;font-size:35px;line-height:39px;"><strong><u>Contact Me<br></u></strong></span><span style="color:#000000;font-family:Arial;font-size:35px;line-height:29px;"><strong><br></strong></span><span style="color:#4F4F4F;font-family:Calibri;font-size:29px;line-height:29px;"><a href="tel:+15865001500">Phone&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; </a></span><span style="color:#4F4F4F;font-family:Poppins;font-size:21px;line-height:29px;"><a href="tel:+15865001500">(586) 500-1500</a><br></span><span style="color:#4F4F4F;font-family:Calibri;font-size:29px;line-height:27px;"><a href="fax:+15868069006">Fax&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </a></span><span style="color:#4F4F4F;font-family:Poppins;font-size:21px;line-height:27px;"><a href="fax:+15868069006">(586) 806-9006</a></span><span style="color:#4F4F4F;font-family:'Poppins';font-weight:700;font-size:29px;line-height:29px;"><br></span><span style="color:#4F4F4F;font-family:Calibri;font-size:29px;line-height:29px;"><a href="mailto:sam@nuaimi.us">e-Mail&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </a></span><span style="color:#4F4F4F;font-family:Poppins;font-size:21px;line-height:29px;"><a href="mailto:sam@nuaimi.us">sam@nuaimi.us</a><br></span><span style="color:#4F4F4F;font-family:Calibri;font-size:29px;line-height:27px;"><a href="https://www.google.com/maps/place/Michigan/@42.5064213,-83.1673187,11.54z/data=!4m6!3m5!1s0x4d4caa3dc7ca0411:0x97dd48597a62c9b3!8m2!3d44.3148443!4d-85.6023643!16zL20vMDRycng?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D">Location&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; </a></span><span style="color:#4F4F4F;font-family:Poppins;font-size:21px;line-height:27px;"><a href="https://www.google.com/maps/place/Michigan/@42.5064213,-83.1673187,11.54z/data=!4m6!3m5!1s0x4d4caa3dc7ca0411:0x97dd48597a62c9b3!8m2!3d44.3148443!4d-85.6023643!16zL20vMDRycng?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D">MI, USA</a><br></span><span style="color:#4F4F4F;font-family:Calibri;font-size:29px;line-height:27px;">Hours&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </span><span style="color:#4F4F4F;font-family:Poppins;font-size:21px;line-height:27px;">Mon-Fri&nbsp; 9A-5P</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="wb_contactForm">
+                     <div id="contactForm">
+                        <div class="row">
+                           <div class="col-1">
+                              <div class="col-1-padding">
+                              </div>
+                           </div>
+                           <div class="col-2">
+                              <div class="col-2-padding">
+                                 <div id="wb_contactText2">
+                                    <p style="margin:6.67px 0 6.67px 0;font-family:Arial;font-size:11px;line-height:13px;font-weight:bold;"><span style="font-family:Open Sans;font-weight:700;font-size:21px;line-height:30px;font-style:italic;">Contact Me</span></p>
+                                    <p style="margin:6.67px 0 6.67px 0;font-family:Arial;font-size:11px;line-height:13px;">&nbsp;</p>
+                                    <table style="box-sizing:border-box;table-layout:fixed;word-break:break-all;border-collapse:collapse;border-spacing:0px;margin:0 0 0 0px;">
+                                       <tbody>
+                                          <tr>
+                                             <td style="padding:0 0.67px 0 0.67px;width:164.87px;height:46.67px;vertical-align:middle;"><p style="margin:0 0 0 12px;font-family:Poppins;font-size:16px;line-height:29px;font-weight:bold;">Phone</p>
+                                             </td>
+                                             <td style="padding:0 0.67px 0 0.67px;width:227.07px;height:46.67px;vertical-align:middle;"><p style="font-family:Poppins;font-size:16px;line-height:29px;font-weight:bold;"><a href="tel:+15865000300">(586) 500-1500</a></p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td style="padding:0 0.67px 0 0.67px;width:164.87px;height:46.73px;vertical-align:middle;"><p style="margin:0 0 0 12px;font-family:Poppins;font-size:16px;line-height:29px;font-weight:bold;">Fax</p>
+                                             </td>
+                                             <td style="padding:0 0.67px 0 0.67px;width:227.07px;height:46.73px;vertical-align:middle;"><p style="font-family:Poppins;font-size:16px;line-height:29px;font-weight:bold;"><a href="fax:+15868069006">(586) 806-9006</a></p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td style="padding:0 0.67px 0 0.67px;width:164.87px;height:46.8px;vertical-align:middle;"><p style="margin:0 0 0 12px;font-family:Poppins;font-size:16px;line-height:29px;font-weight:bold;">Email</p>
+                                             </td>
+                                             <td style="padding:0 0.67px 0 0.67px;width:227.07px;height:46.8px;vertical-align:middle;"><p style="font-family:Poppins;font-size:16px;line-height:29px;font-weight:bold;"><a href="mailto:sam@nuaimi.us">sam@nuaimi.us</a></p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td style="padding:0 0.67px 0 0.67px;width:164.87px;height:42.6px;vertical-align:middle;"><p style="margin:0 0 0 12px;font-family:Poppins;font-size:16px;line-height:29px;font-weight:bold;">Address</p>
+                                             </td>
+                                             <td style="padding:0 0.67px 0 0.67px;width:227.07px;height:42.6px;vertical-align:middle;"><p style="font-family:Poppins;font-size:16px;line-height:29px;font-weight:bold;"><a href="https://www.google.com/maps/place/Michigan/@42.5064213,-83.1673187,11.54z/data=!4m6!3m5!1s0x4d4caa3dc7ca0411:0x97dd48597a62c9b3!8m2!3d44.3148443!4d-85.6023643!16zL20vMDRycng?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D">Michigan, United States</a></p>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td style="padding:0 0.67px 0 0.67px;width:164.87px;height:46.13px;vertical-align:middle;"><p style="margin:0 0 0 12px;font-family:Poppins;font-size:16px;line-height:29px;font-weight:bold;">Hours</p>
+                                             </td>
+                                             <td style="padding:0 0.67px 0 0.67px;width:227.07px;height:46.13px;vertical-align:middle;"><p style="font-family:Poppins;font-size:16px;line-height:29px;font-weight:bold;">Mon-Fri: 9am - 5pm</p>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <p style="margin:6.67px 0 6.67px 0;font-family:Arial;font-size:11px;line-height:13px;font-weight:bold;">&nbsp;</p>
+                                 </div>
+                                 <div id="wb_contactIcon1">
+                                    <a href="https://www.facebook.com/sam.nuaimi"><div id="contactIcon1"><i class="fa fa-facebook"></i></div></a>
+                                 </div>
+                                 <div id="wb_contactIcon2">
+                                    <a href="https://www.linkedin.com/in/snuaimi/"><div id="contactIcon2"><i class="fa fa-linkedin-square"></i></div></a>
+                                 </div>
+                                 <div id="wb_contactIcon3">
+                                    <a href="https://www.instagram.com/sam_nuaimi/"><div id="contactIcon3"><i class="fa fa-instagram"></i></div></a>
+                                 </div>
+                                 <div id="wb_contactIcon4">
+                                    <a href="https://www.youtube.com/channel/UCK5U-e0FqamshxpqStw6VMg"><div id="contactIcon4"><i class="fa fa-youtube-play"></i></div></a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div id="wb_LayoutGrid2">
+                     <div id="LayoutGrid2-overlay"></div>
+                     <div id="LayoutGrid2">
+                        <div class="row">
+                           <div class="col-1">
+                              <div class="col-1-padding">
+                                 <div id="wb_Icon5">
+                                    <a href="https://www.facebook.com/sam.nuaimi"><div id="Icon5"><i class="fa fa-facebook"></i></div></a>
+                                 </div>
+                                 <div id="wb_Icon6">
+                                    <a href="https://www.linkedin.com/in/snuaimi/"><div id="Icon6"><i class="fa fa-linkedin-square"></i></div></a>
+                                 </div>
+                                 <div id="wb_Icon7">
+                                    <a href="https://www.instagram.com/sam_nuaimi/"><div id="Icon7"><i class="fa fa-instagram"></i></div></a>
+                                 </div>
+                                 <div id="wb_Icon8">
+                                    <a href="https://www.youtube.com/channel/UCK5U-e0FqamshxpqStw6VMg"><div id="Icon8"><i class="fa fa-youtube-play"></i></div></a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="wb_footer">
+      <div id="footer">
+         <div class="row">
+            <div class="col-1">
+               <div id="wb_contactText3">
+                  <p style="font-style:italic;">Copyright © 2024 Nuaimi Web &amp; Graphic Design. All Rights Reserved</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="Extension2">
+      <div id="overlay">
+         <ul class="Extension2">
+            <li><h3></h3>
+               <ul>
+                  <li><a href="#intro" title="HOME">HOME</a></li>
+                  <li><a href="#skills" title="ABOUT">ABOUT</a></li>
+                  <li><a href="#services" title="SERVICES">SERVICES</a></li>
+                  <li><a href="#portfolio" title="PORTFILIO">PORTFILIO</a></li>
+                  <li><a href="#contact" title="CONTACT">CONTACT</a></li>
+               </ul>
+            </li>
+         </ul>
+         <div class="social">
+            <a href="https://www.facebook.com/sam.nuaimi/" title="FACEBOOK"><div class="social-icon"><i class="fa fa-facebook-square">&nbsp;</i></div></a>
+            <a href="https://www.linkedin.com/in/snuaimi/" title="LINKEDIN"><div class="social-icon"><i class="fa fa-linkedin-square">&nbsp;</i></div></a>
+            <a href="https://www.instagram.com/sam_nuaimi/" title="INSTAGRAM"><div class="social-icon"><i class="fa fa-instagram">&nbsp;</i></div></a>
+            <a href="https://m.youtube.com/channel/UCK5U-e0FqamshxpqStw6VMg" title="YOUTUBE"><div class="social-icon"><i class="fa fa-youtube-square">&nbsp;</i></div></a>
+         </div>
+      </div>
+      <a id="overlay-close-button" href="#"><span></span></a>
+   </div>
+</body>
+</html>
